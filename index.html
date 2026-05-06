@@ -1,62 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Untuk Kamu ❤️</title>
-
-</head>
-<body>
-  <div class="card" id="card">
-    <h1>Untuk Kamu ❤️</h1>
-    <p>Hai sayang...</p>
-    <p>Aku punya kejutan kecil untukmu :).</p>
-    <button id="surpriseBtn">Klik untuk Kejutan!</button>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const card = document.getElementById('card');
-      const btn = document.getElementById('surpriseBtn');
-      
-      // Munculkan kartu dengan animasi
-      setTimeout(() => {
-        card.classList.add('show');
-      }, 500);
-
-      // Efek hujan hati ketika tombol diklik
-      btn.addEventListener('click', () => {
-        // Tambahkan pesan baru
-        card.innerHTML = `
-          <h1>🎉 Kejutan! 🎉</h1>
-          <p>Hai Happy anniversary :)</p>
-          <p>sudah 3 tahun lamanya kita bisa sampai ke titik ini, sepanjang perjalanan terasa menyenangkan karna ada cobaan dan memberikan pelajaran, apapun cobaannya kita harus tetap berjalan semoga kita bisa bersama dan seterusnya.  ❤️</p>
-          <button onclick="createHearts()">Klik Lagi Dong!</button>
-          <button onclick="fotokita()"><a href=foto.html">memorikita</button>
-        `;
-        
-        // Buat hujan hati
-        createHearts();
-      });
-    });
-
-    function createHearts() {
-      for (let i = 0; i < 30; i++) {
-        const heart = document.createElement('div');
-        heart.classList.add('hearts');
-        heart.innerHTML = '❤️';
-        heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.top = Math.random() * 100 + 'vh';
-        heart.style.animationDuration = 3 + Math.random() * 5 + 's';
-        document.body.appendChild(heart);
-        
-        // Hapus hati setelah animasi selesai
-        setTimeout(() => {
-          heart.remove();
-        }, 5000);
-      }
-    }
-  </script>
-</body>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Penilaian Kinerja Guru - SMP Islam Daarul Qolam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
